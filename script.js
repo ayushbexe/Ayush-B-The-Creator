@@ -16,5 +16,23 @@ fetch('data.json')
     root.style.setProperty('--muted', theme.muted);
     root.style.setProperty('--accent', theme.accent);
     root.style.setProperty('--max-width', theme.maxWidth);
-  })
+  }
+
+    const projectList = document.getElementById('project-list');
+
+data.projects.forEach(project => {
+  const div = document.createElement('div');
+  div.className = 'project';
+
+  div.innerHTML = `
+    <div class="project-title">${project.title}</div>
+    <div class="project-year">${project.year}</div>
+    <div class="project-desc">${project.description}</div>
+  `;
+
+  projectList.appendChild(div);
+  });
+    
+       
+      )
   .catch(console.error);
