@@ -74,6 +74,14 @@ section + section {
   color: var(--accent);
 }
 
+.about-layout {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 48px;
+  align-items: start;
+  margin-top: 64px;
+}
+
 
 #about-section {
   margin-top: 48px;
