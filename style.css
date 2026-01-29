@@ -39,6 +39,7 @@ h1 {
   color: var(--muted);
   font-size: 0.95rem;
   margin-bottom: px;
+  text-align: center;
 }
 
 #about {
