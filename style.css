@@ -30,6 +30,11 @@ h1 {
   margin-bottom: 14px;
 }
 
+#location {
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
 #about {
   max-width: 65ch;
 }
