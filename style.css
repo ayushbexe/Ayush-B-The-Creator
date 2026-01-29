@@ -1,10 +1,13 @@
 :root {
-  --bg: #000;
-  --text: #fff;
-  --muted: #888;
-  --accent: #fff;
+  --bg: #ffffff;
+  --surface: #ffffff;
+  --text: #000000;
+  --muted: #666666;
+  --accent: #000000;
+  --accent-strong: #000000;
   --max-width: 800px;
 }
+
 
 body {
   background: var(--bg);
@@ -15,6 +18,7 @@ body {
 }
 
 .container {
+  background: var(--surface);
   max-width: var(--max-width);
   margin: auto;
   padding: 60px 20px;
