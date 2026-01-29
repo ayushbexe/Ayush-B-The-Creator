@@ -33,6 +33,8 @@ fetch('data.json')
       projectList.appendChild(div);
     });
 
+    // ===== experience =====
+
     const experienceList = document.getElementById('experience-list');
 
 data.experience.forEach(item => {
