@@ -92,6 +92,11 @@ window.addEventListener('scroll', () => {
   }
 });
 
+    const yearEl = document.getElementById('year');
+if (yearEl) {
+  yearEl.textContent = new Date().getFullYear();
+}
+
     
   })
   .catch(err => console.error(err));
