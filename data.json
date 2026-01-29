@@ -4,6 +4,20 @@
     "software": "DaVinci Resolve Studio",
     "about": "Post-production intern with experience in subtitle creation, timing accuracy, and bilingual on-screen text for long-form video content. Currently focused on building strong editorial discipline and workflow efficiency, to transition into an assistant video editor role."
   },
+
+  "projects": [
+    {
+      "title": "Long-form Documentary Subtitling",
+      "description": "Created accurate bilingual subtitles with precise timing for long-form documentary content.",
+      "year": "2025"
+    },
+    {
+      "title": "Editorial Workflow Optimization",
+      "description": "Improved subtitle delivery speed by refining timeline organization and marker usage in DaVinci Resolve.",
+      "year": "2025"
+    }
+  ],
+  
   "theme": {
     "bg": "#121212",
     "text": "#ffffff",
