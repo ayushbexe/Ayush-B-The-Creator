@@ -1,55 +1,43 @@
 fetch('data.json')
   .then(res => res.json())
   .then(data => {
-    // ===== profile content =====
+
+    /* ===== profile content ===== */
     document.getElementById('name').textContent = data.profile.name;
-    document.getElementById('software').textContent `Works with ${data.software}`;
+    document.getElementById('software').textContent =
+      `Works with ${data.profile.software}`;
     document.getElementById('about').textContent = data.profile.about;
 
-    // ===== theme → CSS variables =====
+    /* ===== theme system ===== */
     const root = document.documentElement;
     const themes = data.themes;
 
-// load saved theme or default to dark
-let currentTheme = localStorage.getItem('theme') || 'dark';
-applyTheme(currentTheme);
+    const toggleBtn = document.getElementById('theme-toggle');
+    const icon = document.getElementById('theme-icon');
 
-function applyTheme(name) {
-  const theme = themes[name];
-  root.style.setProperty('--bg', theme.bg);
-  root.style.setProperty('--text', theme.text);
-  root.style.setProperty('--muted', theme.muted);
-  root.style.setProperty('--accent', theme.accent);
-  root.style.setProperty('--max-width', theme.maxWidth);
-  localStorage.setItem('theme', name);
-}
+    let currentTheme = localStorage.getItem('theme') || 'dark';
+    applyTheme(currentTheme);
 
-// toggle button
-const toggleBtn = document.getElementById('theme-toggle');
-const icon = document.getElementById('theme-icon');
+    function applyTheme(name) {
+      const theme = themes[name];
 
-function applyTheme(name) {
-  const theme = themes[name];
+      root.style.setProperty('--bg', theme.bg);
+      root.style.setProperty('--text', theme.text);
+      root.style.setProperty('--muted', theme.muted);
+      root.style.setProperty('--accent', theme.accent);
+      root.style.setProperty('--max-width', theme.maxWidth);
 
-  root.style.setProperty('--bg', theme.bg);
-  root.style.setProperty('--text', theme.text);
-  root.style.setProperty('--muted', theme.muted);
-  root.style.setProperty('--accent', theme.accent);
-  root.style.setProperty('--max-width', theme.maxWidth);
+      icon.textContent = name === 'dark' ? 'dark_mode' : 'light_mode';
 
-  // Google Material icon logic
-  icon.textContent = name === 'dark' ? 'dark_mode' : 'light_mode';
+      localStorage.setItem('theme', name);
+    }
 
-  localStorage.setItem('theme', name);
-}
+    toggleBtn.addEventListener('click', () => {
+      currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      applyTheme(currentTheme);
+    });
 
-toggleBtn.addEventListener('click', () => {
-  currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
-  applyTheme(currentTheme);
-});
-
-
-    // ===== projects =====
+    /* ===== projects ===== */
     const projectList = document.getElementById('project-list');
 
     data.projects.forEach(project => {
@@ -65,24 +53,24 @@ toggleBtn.addEventListener('click', () => {
       projectList.appendChild(div);
     });
 
-    // ===== experience =====
-
+    /* ===== experience ===== */
     const experienceList = document.getElementById('experience-list');
 
-data.experience.forEach(item => {
-  const div = document.createElement('div');
-  div.className = 'role';
+    if (data.experience && experienceList) {
+      data.experience.forEach(item => {
+        const div = document.createElement('div');
+        div.className = 'role';
 
-  div.innerHTML = `
-    <div class="role-title">${item.role}</div>
-    <div class="role-company">${item.company}</div>
-    <div class="role-period">${item.period}</div>
-    <div class="role-summary">${item.summary}</div>
-  `;
+        div.innerHTML = `
+          <div class="role-title">${item.role}</div>
+          <div class="role-company">${item.company}</div>
+          <div class="role-period">${item.period}</div>
+          <div class="role-summary">${item.summary}</div>
+        `;
 
-  experienceList.appendChild(div);
-});
+        experienceList.appendChild(div);
+      });
+    }
 
-    
   })
   .catch(err => console.error(err));
