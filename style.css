@@ -101,6 +101,21 @@ section + section {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
+.about-text {
+  max-width: 65ch;
+}
+
+@media (max-width: 768px) {
+  .about-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .about-photo {
+    max-width: 200px;
+  }
+}
+
+
 .container {
   max-width: var(--max-width);
   margin: auto;
