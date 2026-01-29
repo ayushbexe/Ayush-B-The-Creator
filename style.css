@@ -121,3 +121,9 @@ h1 {
   outline: none;
 }
 
+.material-symbols-outlined {
+  font-size: 22px;
+  line-height: 1;
+  user-select: none;
+}
+
