@@ -57,6 +57,12 @@ body {
   max-width: 65ch;
 }
 
+#about {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: var(--text);
+}
+
 .container {
   max-width: var(--max-width);
   margin: auto;
