@@ -17,6 +17,16 @@
       "year": "2025"
     }
   ],
+
+  "experience": [
+  {
+    "role": "Video Subtitle / Captioning Intern (Virtual)",
+    "company": "LifeGuru.App",
+    "period": "December 2025 – Present",
+    "summary": "Worked on subtitle creation, bilingual on-screen text, and timing accuracy for long-form video content. Focused on clean timelines and efficient editorial workflow in DaVinci Resolve."
+  }
+]
+
   
   "theme": {
     "bg": "#121212",
