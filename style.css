@@ -32,7 +32,8 @@ h1 {
 
 #location {
   color: var(--muted);
-  margin-bottom: 10px;
+  font-size: 0.95rem;
+  margin-bottom: px;
 }
 
 #about {
