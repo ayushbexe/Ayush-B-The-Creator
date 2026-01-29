@@ -40,6 +40,11 @@ body {
   margin-top: 4px;
 }
 
+#about-section {
+  margin-top: 48px;
+  max-width: 65ch;
+}
+
 .container {
   max-width: var(--max-width);
   margin: auto;
@@ -62,10 +67,6 @@ a, button:hover {
   font-size: 0.95rem;
   margin-bottom: px;
   text-align: center;
-}
-
-#about {
-  max-width: 65ch;
 }
 
 #projects {
