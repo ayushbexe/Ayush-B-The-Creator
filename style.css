@@ -30,6 +30,10 @@ h1 {
   margin-bottom: 14px;
 }
 
+#name {
+  font-size: 10rem;
+}
+
 #location {
   color: var(--muted);
   font-size: 0.95rem;
