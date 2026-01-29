@@ -33,3 +33,31 @@ h1 {
 #about {
   max-width: 65ch;
 }
+
+#projects {
+  margin-top: 80px;
+}
+
+#projects h2 {
+  font-size: 1.5rem;
+  margin-bottom: 24px;
+}
+
+.project {
+  margin-bottom: 24px;
+}
+
+.project-title {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.project-year {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+}
+
+.project-desc {
+  max-width: 65ch;
+}
