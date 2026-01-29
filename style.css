@@ -15,16 +15,28 @@ body {
   font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif;
   line-height: 1.6;
   transition: background-color 0.3s ease, color 0.3s ease;
+  margin: 0px;
 }
 
 .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   padding: 16px 32px;
+
+  background: var(--surface);
+  transition: box-shadow 0.2s ease;
+}
+
+.site-header.scrolled {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
 }
+
 
 .brand-name {
   font-size: 1.4rem;
