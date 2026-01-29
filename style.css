@@ -85,10 +85,16 @@ a, button:hover {
   margin-top: 80px;
 }
 
-#projects h2 {
-  font-size: 1.5rem;
-  margin-bottom: 24px;
+#projects h2,
+#experience h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: var(--accentStrong);
 }
+
 
 .project {
   margin-bottom: 24px;
