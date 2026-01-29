@@ -47,7 +47,6 @@ toggleBtn.addEventListener('click', () => {
   currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
   applyTheme(currentTheme);
 });
-;
 
 
     // ===== projects =====
