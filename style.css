@@ -49,13 +49,6 @@ body {
   margin-bottom: 24px;
 }
 
-h1 {
-  margin-bottom: 14px;
-}
-
-h1, h2 {
-  color: var(--accent);
-}
 
 a, button:hover {
   color: var(--accent);
