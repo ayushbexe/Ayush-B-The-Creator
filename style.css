@@ -99,7 +99,7 @@ h1 {
   border-radius: 50%;
 
   background: none;
-  border: 1px solid var(--muted);
+  border: 0px solid var(--muted);
   color: var(--text);
 
   display: flex;
