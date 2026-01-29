@@ -62,6 +62,7 @@ section + section {
 }
 
 .nav-link {
+  position: relative;
   font-size: 0.85rem;
   color: var(--muted);
   text-decoration: none;
@@ -70,8 +71,24 @@ section + section {
   transition: color 0.2s ease;
 }
 
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 1px;
+  background: var(--accent);
+  transition: width 0.2s ease;
+}
+
+
 .nav-link:hover {
   color: var(--accent);
+}
+
+.nav-link:hover::after {
+  width: 100%;
 }
 
 .about-layout {
