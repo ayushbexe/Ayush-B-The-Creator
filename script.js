@@ -24,11 +24,14 @@ fetch('data.json')
     function applyTheme(name) {
       const theme = themes[name];
 
-      root.style.setProperty('--bg', theme.bg);
-      root.style.setProperty('--text', theme.text);
-      root.style.setProperty('--muted', theme.muted);
-      root.style.setProperty('--accent', theme.accent);
-      root.style.setProperty('--max-width', theme.maxWidth);
+root.style.setProperty('--bg', theme.bg);
+root.style.setProperty('--surface', theme.surface);
+root.style.setProperty('--text', theme.text);
+root.style.setProperty('--muted', theme.muted);
+root.style.setProperty('--accent', theme.accent);
+root.style.setProperty('--accent-strong', theme.accentStrong);
+root.style.setProperty('--max-width', theme.maxWidth);
+
 
       icon.textContent = name === 'dark' ? 'dark_mode' : 'light_mode';
 
