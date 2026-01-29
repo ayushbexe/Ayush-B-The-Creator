@@ -1,9 +1,20 @@
 fetch('data.json')
   .then(res => res.json())
   .then(data => {
-    document.getElementById('name').textContent = data.name;
+    // content
+    document.getElementById('name').textContent = data.profile.name;
     document.getElementById('software').textContent =
-      `Software: ${data.software}`;
-    document.getElementById('about').textContent = data.about;
+      `Software: ${data.profile.software}`;
+    document.getElementById('about').textContent = data.profile.about;
+
+    // theme → CSS variables
+    const root = document.documentElement;
+    const theme = data.theme;
+
+    root.style.setProperty('--bg', theme.bg);
+    root.style.setProperty('--text', theme.text);
+    root.style.setProperty('--muted', theme.muted);
+    root.style.setProperty('--accent', theme.accent);
+    root.style.setProperty('--max-width', theme.maxWidth);
   })
-  .catch(err => console.error(err));
+  .catch(console.error);
