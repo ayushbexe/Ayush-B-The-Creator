@@ -55,6 +55,25 @@ section + section {
   margin-top: 96px;
 }
 
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.nav-link {
+  font-size: 0.85rem;
+  color: var(--muted);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: var(--accent);
+}
+
 
 #about-section {
   margin-top: 48px;
@@ -164,8 +183,8 @@ a, button:hover {
   right: 20px;
   margin-left: 24px;
 
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
 
   background: none;
