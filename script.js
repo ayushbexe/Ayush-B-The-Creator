@@ -9,13 +9,28 @@ fetch('data.json')
 
     // ===== theme → CSS variables =====
     const root = document.documentElement;
-    const theme = data.theme;
+    const themes = data.themes;
 
-    root.style.setProperty('--bg', theme.bg);
-    root.style.setProperty('--text', theme.text);
-    root.style.setProperty('--muted', theme.muted);
-    root.style.setProperty('--accent', theme.accent);
-    root.style.setProperty('--max-width', theme.maxWidth);
+// load saved theme or default to dark
+let currentTheme = localStorage.getItem('theme') || 'dark';
+applyTheme(currentTheme);
+
+function applyTheme(name) {
+  const theme = themes[name];
+  root.style.setProperty('--bg', theme.bg);
+  root.style.setProperty('--text', theme.text);
+  root.style.setProperty('--muted', theme.muted);
+  root.style.setProperty('--accent', theme.accent);
+  root.style.setProperty('--max-width', theme.maxWidth);
+  localStorage.setItem('theme', name);
+}
+
+// toggle button
+document.getElementById('theme-toggle').addEventListener('click', () => {
+  currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+  applyTheme(currentTheme);
+});
+
 
     // ===== projects =====
     const projectList = document.getElementById('project-list');
