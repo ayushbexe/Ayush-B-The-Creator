@@ -117,3 +117,7 @@ h1 {
   transform: scale(1.05);
 }
 
+#theme-toggle:focus {
+  outline: none;
+}
+
