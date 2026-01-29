@@ -3,8 +3,7 @@ fetch('data.json')
   .then(data => {
     // ===== profile content =====
     document.getElementById('name').textContent = data.profile.name;
-    document.getElementById('software').textContent =
-      `Software: ${data.profile.software}`;
+    document.getElementById('software').textContent = data.profile.software;
     document.getElementById('about').textContent = data.profile.about;
 
     // ===== theme → CSS variables =====
