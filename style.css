@@ -290,12 +290,8 @@ a, button:hover {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-html[data-theme="dark"] .site-footer {
+html[data-theme="dark"] .site-footer .contact-block {
   border-top: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-html[data-theme="dark"] .contact-block {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .footer-inner {
