@@ -32,5 +32,23 @@ fetch('data.json')
 
       projectList.appendChild(div);
     });
+
+    const experienceList = document.getElementById('experience-list');
+
+data.experience.forEach(item => {
+  const div = document.createElement('div');
+  div.className = 'role';
+
+  div.innerHTML = `
+    <div class="role-title">${item.role}</div>
+    <div class="role-company">${item.company}</div>
+    <div class="role-period">${item.period}</div>
+    <div class="role-summary">${item.summary}</div>
+  `;
+
+  experienceList.appendChild(div);
+});
+
+    
   })
   .catch(err => console.error(err));
