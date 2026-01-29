@@ -17,6 +17,27 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 24px 32px;
+  border-bottom: 1px solid var(--muted);
+}
+
+.brand-name {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--accentStrong);
+}
+
+.brand-software {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
 .container {
   max-width: var(--max-width);
   margin: auto;
