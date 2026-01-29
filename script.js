@@ -7,7 +7,9 @@ fetch('data.json')
     document.getElementById('location').textContent = data.profile.location;
     document.getElementById('software').textContent =
       `Works with ${data.profile.software}`;
-    document.getElementById('about').textContent = data.profile.about;
+    document.getElementById('about').innerHTML =
+  data.profile.about.replace(/\n/g, '<br><br>');
+
 
     /* ===== theme system ===== */
     const root = document.documentElement;
