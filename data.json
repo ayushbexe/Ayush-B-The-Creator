@@ -29,18 +29,22 @@
 ],
   "themes": {
   "dark": {
-    "bg": "#121212",
-    "text": "#ffffff",
-    "muted": "#b0b0b0",
-    "accent": "#4f46e5",
-    "maxWidth": "1000px"
+    "bg": "#173753",
+    "surface": "#1B4353",
+    "text": "#EAF4FB",
+    "muted": "#6DAEDB",
+    "accent": "#2892D7",
+    "accentStrong": "#1D70A2",
+    "maxWidth": "800px"
   },
   "light": {
-    "bg": "#ffffff",
-    "text": "#121212",
-    "muted": "#555555",
-    "accent": "#4f46e5",
-    "maxWidth": "1000px"
+    "bg": "#EAF4FB",
+    "surface": "#FFFFFF",
+    "text": "#173753",
+    "muted": "#1D70A2",
+    "accent": "#2892D7",
+    "accentStrong": "#1B4353",
+    "maxWidth": "800px"
   }
 }
 
