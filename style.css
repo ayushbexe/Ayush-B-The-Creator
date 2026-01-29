@@ -326,3 +326,24 @@ html[data-theme="dark"] .site-footer {
     transform: translateY(0);
   }
 }
+
+
+
+.contact-intro {
+  max-width: 50ch;
+  margin: 32px 0 48px;
+  color: var(--muted);
+}
+
+.contact-block {
+  margin-bottom: 32px;
+}
+
+.contact-block a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.contact-block a:hover {
+  text-decoration: underline;
+}
