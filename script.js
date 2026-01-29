@@ -25,10 +25,29 @@ function applyTheme(name) {
 }
 
 // toggle button
-document.getElementById('theme-toggle').addEventListener('click', () => {
+const toggleBtn = document.getElementById('theme-toggle');
+const icon = document.getElementById('theme-icon');
+
+function applyTheme(name) {
+  const theme = themes[name];
+
+  root.style.setProperty('--bg', theme.bg);
+  root.style.setProperty('--text', theme.text);
+  root.style.setProperty('--muted', theme.muted);
+  root.style.setProperty('--accent', theme.accent);
+  root.style.setProperty('--max-width', theme.maxWidth);
+
+  // Google Material icon logic
+  icon.textContent = name === 'dark' ? 'dark_mode' : 'light_mode';
+
+  localStorage.setItem('theme', name);
+}
+
+toggleBtn.addEventListener('click', () => {
   currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
   applyTheme(currentTheme);
 });
+;
 
 
     // ===== projects =====
