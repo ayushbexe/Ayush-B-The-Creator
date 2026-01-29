@@ -32,14 +32,14 @@
     "text": "#ffffff",
     "muted": "#b0b0b0",
     "accent": "#4f46e5",
-    "maxWidth": "1200px"
+    "maxWidth": "1000px"
   },
   "light": {
     "bg": "#ffffff",
     "text": "#121212",
     "muted": "#555555",
     "accent": "#4f46e5",
-    "maxWidth": "1200px"
+    "maxWidth": "1000px"
   }
 }
 
