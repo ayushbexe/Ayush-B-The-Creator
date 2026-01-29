@@ -12,27 +12,36 @@
 </head>
 <body>
 
+  <header class="site-header">
+    <div class="brand">
+      <div id="name" class="brand-name"></div>
+      <div id="software" class="brand-software"></div>
+    </div>
+
+    <button id="theme-toggle" aria-label="Toggle theme">
+      <span id="theme-icon" class="material-symbols-outlined"></span>
+    </button>
+  </header>
+
   <main class="container">
-    <h1 id="name"></h1>
-    <h3 class="location" id="location"></h3>
-    <p class="software" id="software"></p>
-    <hr>
-    <p class="about" id="about"></p>
+    <section id="description">
+      <p id="about"></p>
+    </section>
 
     <section id="projects">
-  <h2>Projects</h2>
-  <div id="project-list"></div>
-  </section>
+      <h2>Projects</h2>
+      <div id="project-list"></div>
+    </section>
 
     <section id="experience">
-  <h2>Experience</h2>
-  <div id="experience-list"></div>
-  </section>
-
+      <h2>Experience</h2>
+      <div id="experience-list"></div>
+    </section>
   </main>
 
   <script src="script.js"></script>
 </body>
+
  <button id="theme-toggle" aria-label="Toggle theme">
   <span id="theme-icon" class="material-symbols-outlined"></span>
 </button>
