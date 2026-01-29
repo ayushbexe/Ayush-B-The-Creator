@@ -294,6 +294,9 @@ html[data-theme="dark"] .site-footer {
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+html[data-theme="dark"] .contact-block {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
 
 .footer-inner {
   max-width: var(--max-width);
@@ -344,9 +347,13 @@ html[data-theme="dark"] .site-footer {
 
 .contact-block {
   margin-bottom: 32px;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .contact-block a {
+  font-size: 0.95rem;
+  font-weight: 500;
   color: var(--accent);
   text-decoration: none;
 }
