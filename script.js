@@ -38,6 +38,7 @@ root.style.setProperty('--max-width', theme.maxWidth);
 
       icon.textContent = name === 'dark' ? 'dark_mode' : 'light_mode';
 
+      document.documentElement.setAttribute('data-theme', name);
       localStorage.setItem('theme', name);
     }
 
