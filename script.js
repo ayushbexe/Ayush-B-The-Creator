@@ -2,17 +2,21 @@ fetch('data.json')
   .then(res => res.json())
   .then(data => {
 
-    /* ===== profile content ===== */
-    document.getElementById('name').textContent = data.profile.name;
-    document.getElementById('software').textContent =
-  `Works with ${data.profile.software}`;
+    /* ===== profile ===== */
+    const nameEl = document.getElementById('name');
+    if (nameEl) nameEl.textContent = data.profile.name;
+
+    const softwareEl = document.getElementById('software');
+    if (softwareEl) {
+      softwareEl.textContent = `Works with ${data.profile.software}`;
+    }
 
     const aboutEl = document.getElementById('about');
     if (aboutEl) {
       aboutEl.innerHTML = data.profile.about.replace(/\n/g, '<br><br>');
     }
 
-    /* ===== theme system ===== */
+    /* ===== theme ===== */
     const root = document.documentElement;
     const themes = data.themes;
 
@@ -38,12 +42,49 @@ fetch('data.json')
       localStorage.setItem('theme', name);
     }
 
-    toggleBtn.addEventListener('click', () => {
-      currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
-      applyTheme(currentTheme);
-    });
+    if (toggleBtn) {
+      toggleBtn.addEventListener('click', () => {
+        currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        applyTheme(currentTheme);
+      });
+    }
 
-    /* ===== contact page ===== */
+    /* ===== projects ===== */
+    const projectList = document.getElementById('project-list');
+    if (projectList && data.projects) {
+      data.projects.forEach(project => {
+        const div = document.createElement('div');
+        div.className = 'project';
+
+        div.innerHTML = `
+          <div class="project-title">${project.title}</div>
+          <div class="project-year">${project.year}</div>
+          <div class="project-desc">${project.description}</div>
+        `;
+
+        projectList.appendChild(div);
+      });
+    }
+
+    /* ===== experience ===== */
+    const experienceList = document.getElementById('experience-list');
+    if (experienceList && data.experience) {
+      data.experience.forEach(item => {
+        const div = document.createElement('div');
+        div.className = 'role';
+
+        div.innerHTML = `
+          <div class="role-title">${item.role}</div>
+          <div class="role-company">${item.company}</div>
+          <div class="role-period">${item.period}</div>
+          <div class="role-summary">${item.summary}</div>
+        `;
+
+        experienceList.appendChild(div);
+      });
+    }
+
+    /* ===== contact ===== */
     if (data.contact) {
       const emailEl = document.getElementById('contact-email');
       const phoneEl = document.getElementById('contact-phone');
@@ -63,6 +104,12 @@ fetch('data.json')
         githubEl.textContent = data.contact.github.replace('https://', '');
         githubEl.href = data.contact.github;
       }
+    }
+
+    /* ===== footer year ===== */
+    const yearEl = document.getElementById('year');
+    if (yearEl) {
+      yearEl.textContent = new Date().getFullYear();
     }
 
   })
