@@ -4,6 +4,8 @@ fetch('data.json')
 
     /* ===== profile content ===== */
     document.getElementById('name').textContent = data.profile.name;
+    document.getElementById('software').textContent =
+  `Works with ${data.profile.software}`;
 
     const aboutEl = document.getElementById('about');
     if (aboutEl) {
