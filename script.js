@@ -108,3 +108,26 @@ if (yearEl) {
     
   })
   .catch(err => console.error(err));
+
+/* ===== contact page ===== */
+const emailEl = document.getElementById('contact-email');
+const phoneEl = document.getElementById('contact-phone');
+const githubEl = document.getElementById('contact-github');
+
+if (data.contact) {
+  if (emailEl) {
+    emailEl.textContent = data.contact.email;
+    emailEl.href = `mailto:${data.contact.email}`;
+  }
+
+  if (phoneEl) {
+    phoneEl.textContent = data.contact.phone;
+    phoneEl.href = `tel:${data.contact.phone.replace(/\s+/g, '')}`;
+  }
+
+  if (githubEl) {
+    githubEl.textContent = data.contact.github.replace('https://', '');
+    githubEl.href = data.contact.github;
+  }
+}
+
