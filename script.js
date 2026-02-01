@@ -10,8 +10,11 @@ if (locationEl) {
 }
     document.getElementById('software').textContent =
       `Works with ${data.profile.software}`;
-    document.getElementById('about').innerHTML =
-  data.profile.about.replace(/\n/g, '<br><br>');
+    const aboutEl = document.getElementById('about');
+if (aboutEl) {
+  aboutEl.innerHTML = data.profile.about.replace(/\n/g, '<br><br>');
+}
+
 
 
     /* ===== theme system ===== */
