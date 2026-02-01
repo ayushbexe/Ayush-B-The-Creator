@@ -109,7 +109,7 @@ section + section {
 }
 
 #about {
-  font-size: 0.95rem;
+  font-size: 2rem;
   line-height: 1.75;
   color: var(--text);
 }
@@ -139,7 +139,7 @@ section + section {
 .container {
   max-width: var(--max-width);
   margin: auto;
-  padding: 30px 20px;
+  padding: 200px 20px;
 }
 
 .software {
