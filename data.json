@@ -19,10 +19,17 @@
       "year": "2025"
     },
     {
-      "title": "Editorial Workflow Optimization",
-      "description": "Improved subtitle delivery speed by refining timeline organization and marker usage in DaVinci Resolve.",
-      "year": "2025"
+  "title": "Editorial Workflow Optimization",
+  "description": "Improved subtitle delivery speed by introducing my own subtitle toolkit web app.",
+  "year": "2025",
+  "links": [
+    {
+      "label": "SRThub",
+      "url": "https://ayushbexe.github.io/SRThub/"
     }
+  ]
+}
+
   ],
 
   "experience": [
