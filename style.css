@@ -31,6 +31,7 @@ body {
 
   background: var(--surface);
   transition: box-shadow 0.2s ease;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .site-header.scrolled {
@@ -354,9 +355,6 @@ html[data-theme="dark"] .site-footer .contact-block {
   text-decoration: none;
 }
 
-.contact-page .site-header {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-}
 
 
 .contact-block a:hover {
