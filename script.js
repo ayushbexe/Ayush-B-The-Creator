@@ -56,11 +56,24 @@ fetch('data.json')
         const div = document.createElement('div');
         div.className = 'project';
 
-        div.innerHTML = `
-          <div class="project-title">${project.title}</div>
-          <div class="project-year">${project.year}</div>
-          <div class="project-desc">${project.description}</div>
-        `;
+        let linksHTML = '';
+
+if (project.links) {
+  linksHTML = project.links
+    .map(
+      link =>
+        `<a href="${link.url}" target="_blank" class="project-link">${link.label}</a>`
+    )
+    .join('');
+}
+
+div.innerHTML = `
+  <div class="project-title">${project.title}</div>
+  <div class="project-year">${project.year}</div>
+  <div class="project-desc">${project.description}</div>
+  ${linksHTML}
+`;
+
 
         projectList.appendChild(div);
       });
