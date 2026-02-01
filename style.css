@@ -139,7 +139,7 @@ section + section {
 .container {
   max-width: var(--max-width);
   margin: auto;
-  padding: 60px 20px;
+  padding: 30px 20px;
 }
 
 .software {
