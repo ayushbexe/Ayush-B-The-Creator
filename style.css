@@ -248,7 +248,7 @@ a, button:hover {
   font-size: 18px;
   cursor: pointer;
 
-  transition: border-color 0.2s ease, color 0.2 ease, transform 0.2s ease;
+  transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
 #theme-toggle:hover {
