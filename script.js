@@ -85,13 +85,17 @@ root.style.setProperty('--max-width', theme.maxWidth);
 /* ===== header scroll shadow ===== */
 const header = document.querySelector('.site-header');
 
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 10) {
+function updateHeaderShadow() {
+  if (window.scrollY > 10 || document.body.scrollHeight <= window.innerHeight) {
     header.classList.add('scrolled');
   } else {
     header.classList.remove('scrolled');
   }
-});
+}
+
+updateHeaderShadow();
+window.addEventListener('scroll', updateHeaderShadow);
+
 
     const yearEl = document.getElementById('year');
 if (yearEl) {
