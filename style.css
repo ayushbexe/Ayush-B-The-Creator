@@ -211,6 +211,27 @@ a, button:hover {
   max-width: 65ch;
 }
 
+.project-link {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--accent);
+  text-decoration: none;
+  position: relative;
+}
+
+.project-link::after {
+  content: '↗';
+  margin-left: 6px;
+  font-size: 0.8rem;
+}
+
+.project-link:hover {
+  text-decoration: underline;
+}
+
+
 #experience {
   margin-top: 80px;
 }
