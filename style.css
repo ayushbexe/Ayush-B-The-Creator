@@ -168,7 +168,7 @@ a, button:hover {
   letter-spacing: 0.04em;
   text-transform: uppercase;
   margin-bottom: 20px;
-  color: var(--accentStrong);
+  color: var(--accent-Strong);
 }
 
 
@@ -332,7 +332,7 @@ html[data-theme="dark"] .site-footer .contact-block {
   font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: var(--accentStrong);
+  color: var(--accent-Strong);
 }
 
 .contact-intro {
