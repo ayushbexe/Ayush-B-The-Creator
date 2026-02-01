@@ -109,7 +109,7 @@ section + section {
 }
 
 #about {
-  font-size: 2rem;
+  font-size: 1rem;
   line-height: 1.75;
   color: var(--text);
 }
