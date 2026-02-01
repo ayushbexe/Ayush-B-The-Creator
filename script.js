@@ -4,18 +4,11 @@ fetch('data.json')
 
     /* ===== profile content ===== */
     document.getElementById('name').textContent = data.profile.name;
-    const locationEl = document.getElementById('location');
-if (locationEl) {
-  locationEl.textContent = data.profile.location;
-}
-    document.getElementById('software').textContent =
-      `Works with ${data.profile.software}`;
+
     const aboutEl = document.getElementById('about');
-if (aboutEl) {
-  aboutEl.innerHTML = data.profile.about.replace(/\n/g, '<br><br>');
-}
-
-
+    if (aboutEl) {
+      aboutEl.innerHTML = data.profile.about.replace(/\n/g, '<br><br>');
+    }
 
     /* ===== theme system ===== */
     const root = document.documentElement;
@@ -30,17 +23,15 @@ if (aboutEl) {
     function applyTheme(name) {
       const theme = themes[name];
 
-root.style.setProperty('--bg', theme.bg);
-root.style.setProperty('--surface', theme.surface);
-root.style.setProperty('--text', theme.text);
-root.style.setProperty('--muted', theme.muted);
-root.style.setProperty('--accent', theme.accent);
-root.style.setProperty('--accent-strong', theme.accentStrong);
-root.style.setProperty('--max-width', theme.maxWidth);
-
+      root.style.setProperty('--bg', theme.bg);
+      root.style.setProperty('--surface', theme.surface);
+      root.style.setProperty('--text', theme.text);
+      root.style.setProperty('--muted', theme.muted);
+      root.style.setProperty('--accent', theme.accent);
+      root.style.setProperty('--accent-strong', theme.accentStrong);
+      root.style.setProperty('--max-width', theme.maxWidth);
 
       icon.textContent = name === 'dark' ? 'dark_mode' : 'light_mode';
-
       document.documentElement.setAttribute('data-theme', name);
       localStorage.setItem('theme', name);
     }
@@ -50,84 +41,27 @@ root.style.setProperty('--max-width', theme.maxWidth);
       applyTheme(currentTheme);
     });
 
-    /* ===== projects ===== */
-    const projectList = document.getElementById('project-list');
+    /* ===== contact page ===== */
+    if (data.contact) {
+      const emailEl = document.getElementById('contact-email');
+      const phoneEl = document.getElementById('contact-phone');
+      const githubEl = document.getElementById('contact-github');
 
-    data.projects.forEach(project => {
-      const div = document.createElement('div');
-      div.className = 'project';
+      if (emailEl) {
+        emailEl.textContent = data.contact.email;
+        emailEl.href = `mailto:${data.contact.email}`;
+      }
 
-      div.innerHTML = `
-        <div class="project-title">${project.title}</div>
-        <div class="project-year">${project.year}</div>
-        <div class="project-desc">${project.description}</div>
-      `;
+      if (phoneEl) {
+        phoneEl.textContent = data.contact.phone;
+        phoneEl.href = `tel:${data.contact.phone.replace(/\s+/g, '')}`;
+      }
 
-      projectList.appendChild(div);
-    });
-
-    /* ===== experience ===== */
-    const experienceList = document.getElementById('experience-list');
-
-    if (data.experience && experienceList) {
-      data.experience.forEach(item => {
-        const div = document.createElement('div');
-        div.className = 'role';
-
-        div.innerHTML = `
-          <div class="role-title">${item.role}</div>
-          <div class="role-company">${item.company}</div>
-          <div class="role-period">${item.period}</div>
-          <div class="role-summary">${item.summary}</div>
-        `;
-
-        experienceList.appendChild(div);
-      });
+      if (githubEl) {
+        githubEl.textContent = data.contact.github.replace('https://', '');
+        githubEl.href = data.contact.github;
+      }
     }
 
-/* ===== header scroll shadow ===== */
-const header = document.querySelector('.site-header');
-
-function updateHeaderShadow() {
-  if (window.scrollY > 10 || document.body.scrollHeight <= window.innerHeight) {
-    header.classList.add('scrolled');
-  } else {
-    header.classList.remove('scrolled');
-  }
-}
-
-updateHeaderShadow();
-window.addEventListener('scroll', updateHeaderShadow);
-
-
-    const yearEl = document.getElementById('year');
-if (yearEl) {
-  yearEl.textContent = new Date().getFullYear();
-}
-
-    
   })
   .catch(err => console.error(err));
-
-/* ===== contact page ===== */
-const emailEl = document.getElementById('contact-email');
-const phoneEl = document.getElementById('contact-phone');
-const githubEl = document.getElementById('contact-github');
-
-if (data.contact) {
-  if (emailEl) {
-    emailEl.textContent = data.contact.email;
-    emailEl.href = `mailto:${data.contact.email}`;
-  }
-
-  if (phoneEl) {
-    phoneEl.textContent = data.contact.phone;
-    phoneEl.href = `tel:${data.contact.phone.replace(/\s+/g, '')}`;
-  }
-
-  if (githubEl) {
-    githubEl.textContent = data.contact.github.replace('https://', '');
-    githubEl.href = data.contact.github;
-  }
-}
-
