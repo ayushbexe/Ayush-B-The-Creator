@@ -6,6 +6,12 @@
     "about": "Namastey, Glad to see you here!\n I'm a Post-production intern with experience in subtitle creation, timing accuracy, and bilingual on-screen text for long-form video content. Currently focused on building strong editorial discipline and workflow efficiency, to transition into an assistant video editor role."
   },
 
+  "contact": {
+    "email": "ayush@example.com",
+    "phone": "+91 9XXXXXXXXX",
+    "github": "https://github.com/ayushbexe"
+  },
+
   "projects": [
     {
       "title": "Long-form Documentary Subtitling",
