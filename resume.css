@@ -82,7 +82,7 @@ ul {
   width: 42px;
   height: 42px;
 
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
 
